@@ -1,0 +1,45 @@
+{
+  "enabled": true,
+  "min_version": "v14",
+  "force_update": false,
+  "maintenance_msg": "Script em manutenção, volte em breve!",
+  "denied_msg": "Você não está na whitelist. Contate VampireSonata no Discord.",
+  "users": [
+    {
+      "id": 123456789,
+      "name": "VampireSonata",
+      "role": "admin",
+      "banned": false,
+      "ban_reason": null,
+      "expires": null,
+      "note": "Dono do script"
+    },
+    {
+      "id": 987654321,
+      "name": "ExemploVIP",
+      "role": "vip",
+      "banned": false,
+      "ban_reason": null,
+      "expires": null,
+      "note": "VIP vitalício"
+    },
+    {
+      "id": 111222333,
+      "name": "ExemploContribuidor",
+      "role": "contributor",
+      "banned": false,
+      "ban_reason": null,
+      "expires": 1756684800,
+      "note": "Contributor até 2025-09-01"
+    },
+    {
+      "id": 444555666,
+      "name": "ExemploUser",
+      "role": "user",
+      "banned": false,
+      "ban_reason": null,
+      "expires": null,
+      "note": "User comum"
+    }
+  ]
+}
