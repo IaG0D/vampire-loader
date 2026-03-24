@@ -24,6 +24,15 @@
       "note": "Admin"
     },
     {
+      "id": 10062725814,
+      "name": "Lulu 2",
+      "role": "admin",
+      "banned": false,
+      "ban_reason": null,
+      "expires": null,
+      "note": "Admin"
+    },
+    {
       "id": 987654321,
       "name": "ExemploVIP",
       "role": "vip",
