@@ -15,6 +15,15 @@
       "note": "Dono do script"
     },
     {
+      "id": 7594490830,
+      "name": "Lulu",
+      "role": "admin",
+      "banned": false,
+      "ban_reason": null,
+      "expires": null,
+      "note": "Admin"
+    },
+    {
       "id": 987654321,
       "name": "ExemploVIP",
       "role": "vip",
