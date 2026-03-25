@@ -458,6 +458,7 @@ soundLoopState = { loop = false }
 savedFogEnd = nil
 savedFogStart = nil
 savedAmbient = nil
+gfxSlidersReady = false
 savedOutdoorAmbient = nil
 
 -- Emote state
@@ -6206,6 +6207,7 @@ GfxShaderStatus.Parent = GfxScroll
 createSectionHeader(GfxScroll, "Manual Controls", 508)
 
 GfxBloomSlider = createSliderRow(GfxScroll, "Bloom Intensity", 0, 20, 5, 534, function(val)
+    if not gfxSlidersReady then return end
     local bloom = game.Lighting:FindFirstChild("VampGFX_Bloom")
     if bloom then
         bloom.Intensity = val / 10
@@ -6213,6 +6215,7 @@ GfxBloomSlider = createSliderRow(GfxScroll, "Bloom Intensity", 0, 20, 5, 534, fu
 end)
 
 GfxBlurSlider = createSliderRow(GfxScroll, "Blur", 0, 10, 0, 572, function(val)
+    if not gfxSlidersReady then return end
     local blur = game.Lighting:FindFirstChild("VampGFX_Blur")
     if not blur and val > 0 then
         blur = Instance.new("BlurEffect")
@@ -6226,6 +6229,7 @@ GfxBlurSlider = createSliderRow(GfxScroll, "Blur", 0, 10, 0, 572, function(val)
 end)
 
 GfxBrightSlider = createSliderRow(GfxScroll, "Brightness", 1, 5, 2, 610, function(val)
+    if not gfxSlidersReady then return end
     game.Lighting.Brightness = val
 end)
 
@@ -6237,6 +6241,7 @@ createSectionHeader(GfxScroll, "Environment", 650)
 
 -- Time of Day (0-24h)
 GfxTimeSlider = createSliderRow(GfxScroll, "Time of Day", 0, 24, 14, 676, function(val)
+    if not gfxSlidersReady then return end
     if saveOriginalLighting then saveOriginalLighting() end
     game.Lighting.ClockTime = val
 end)
@@ -6256,6 +6261,7 @@ end
 
 -- FOV (30-120)
 GfxFovSlider = createSliderRow(GfxScroll, "FOV", 30, 120, 70, 714, function(val)
+    if not gfxSlidersReady then return end
     if saveOriginalLighting then saveOriginalLighting() end
     pcall(function()
         workspace.CurrentCamera.FieldOfView = val
@@ -6277,6 +6283,7 @@ end
 
 -- Fog Distance (1-100 = FogEnd * 100)
 GfxFogSlider = createSliderRow(GfxScroll, "Fog Distance", 1, 100, 100, 752, function(val)
+    if not gfxSlidersReady then return end
     if saveOriginalLighting then saveOriginalLighting() end
     game.Lighting.FogEnd = val * 100
 end)
@@ -7860,7 +7867,7 @@ addBtnGradient(SoundStopBtn)
 makeHoverable(SoundStopBtn, Colors.bloodDark, Colors.blood)
 
 -- Slider de volume
-SoundVolumeSlider = createSliderRow(UtilsScroll, "Volume", 0, 100, 50, 304, function(val)
+UtilsSoundVolumeSlider = createSliderRow(UtilsScroll, "Volume", 0, 100, 50, 304, function(val)
 	SoundVolumeValue = val
 end)
 
@@ -20629,6 +20636,9 @@ end
 
 -- Load favorite emotes from file
 loadFavoriteEmotes()
+
+-- Liberar sliders do GFX (nao aplicar na carga)
+gfxSlidersReady = true
 
 -- Set default tab
 switchTab("scanner")
