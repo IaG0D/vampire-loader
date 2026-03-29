@@ -42,6 +42,15 @@
       "note": "VIP vitalício"
     },
     {
+      "id": 2262783959,
+      "name": "GODQUENTE",
+      "role": "vip",
+      "banned": false,
+      "ban_reason": null,
+      "expires": null,
+      "note": "VIP vitalício"
+    },
+    {
       "id": 111222333,
       "name": "ExemploContribuidor",
       "role": "contributor",
