@@ -4,7 +4,7 @@
   "min_version": "v14",
   "force_update": false,
   "maintenance_msg": "Script em manutenção, volte em breve!",
-  "denied_msg": "Você não está na whitelist. Contate VampireSonata no Discord.",
+  "denied_msg": "Você não está na whitelist. Contate iag0d no Discord.",
   "users": [
     {
       "id": 123456789,

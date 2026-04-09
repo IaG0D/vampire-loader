@@ -20,20 +20,15 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/IaG0D/vampire-loader/
 
 ## Features
 
-### 🔍 Rig Scanner
-- Scan workspace for character models and NPCs
-- Export rig data as JSON
-- Auto-scan with configurable interval
-- Search and filter results
-
 ### 👁 ESP System
 - Player & NPC ESP with multiple modes
 - Health bars, box highlights, chams/fill
 - Tracers, skeleton ESP, head dot
-- Tool ESP, item icons
+- Tool ESP with item icons
 - Threat level indicators
 - Sound ESP & footstep trails
 - Player info cards
+- Voice constellation (voice chat orbs)
 
 ### 🎯 Aimbot
 - FOV-based target detection (10-360 radius)
@@ -46,6 +41,13 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/IaG0D/vampire-loader/
 - Server info (player count, ping, job ID)
 - Spectate any player
 - Shadow clone, troll panel, backpack viewer
+- **Right-click radial menu** on any player in-game
+
+### 🎯 Radial Menu (NEW)
+- Right-click any player in the 3D world
+- Quick actions: **Spectate, Teleport, Shadow, Troll, Close**
+- Shadow/Troll/Spectate buttons show **Stop** when active
+- Animated open/close with scale tween
 
 ### 🏃 Movement
 - **Fly** — WASD + Space/Shift flight
@@ -57,15 +59,32 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/IaG0D/vampire-loader/
 - **Flashback** — Save & recall position
 - **feFlip** — Front flip animation
 - **Speed & Jump** — Adjustable walk speed (1-500) and jump power (0-300)
-- **Character Scale** — Adjust height, width, head size (0.5x-5.0x)
+- **Character Scale** — Adjust height, width, depth, head size, proportions
 
 ### 💃 Emote Player
 - Play any animation by ID
-- Speed control (0.2x-5.0x)
 - Pause / resume / stop
-- **Sync Emotes** — Select other players and sync animations (client-side)
+- **Sync Emotes** — Select other players and sync animations
 - Favorites system with persistent storage
 - Catalog search with thumbnails
+
+### 🎞 Animation System (NEW)
+- Browse trending animation bundles
+- Apply full bundles (idle, walk, run, jump, climb, swim, fall)
+- Apply individual animation slots
+- Search animation catalog
+- Favorites system
+- Natural idle variation preserved
+
+### 🎬 Cinema Mode (NEW)
+- **6 camera modes:** Freecam, Orbit, Dolly, Follow, Static, Crane
+- **Visual effects:** Letterbox, vignette, film grain, DOF, motion blur, sun rays
+- **Color grading:** 9 presets + custom brightness/contrast/saturation
+- **Waypoint system** with cubic easing, loop, ping-pong
+- **Recording system** with timestamp interpolation
+- **Quick actions:** Fade, zoom punch, shake, bird/worm eye, screenshot, mirror
+- **Hotkeys:** WASD, F=Target, K=Keyframe, P=Play, R=Record, Backspace=Exit
+- Auto-hides HUD, floating info bar with current mode
 
 ### 🎮 Game-Specific
 - **Death Ball** — Auto-play, auto-dodge, ESP, prediction, kill feed
@@ -87,43 +106,80 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/IaG0D/vampire-loader/
 - **Copy Place ID / Job ID** — One-click clipboard
 - **Anti-AFK** — Prevent idle kick
 - **Waypoints** — Save positions, teleport back, manage list
-- **Sound Player** — Play audio IDs with volume control
+- **Shift+F5** — Quick Save All hotkey
 
 ### ⚙ Configuration
-- Auto-scan settings
 - Spectate highlight toggle
-- Save Instance (with decompile, players, NPCs, camera)
+- **Save Instance** — Full map, characters only, NPCs only, GUIs only, animations only
 - Cosmetics (headless, invisible, ghost, hide nametags, hide game UI)
 - Remote Spy panel
 - Chat Spy panel
 - Execute arbitrary Luau code
 - **License info & online users** (VIP+ feature)
 
-### 🔒 Security
-- **Whitelist system** with role-based access
-- Roles: 👑 Admin, ⭐ VIP, 🔧 Contributor, 🦇 User
-- License expiration support
-- Ban system with custom messages
-- Maintenance mode
-- Version control & forced updates
-- Obfuscated source code
+---
+
+## Premium Experience
+
+### 🦇 Animated Splash Screen
+- Full-screen cinematic intro with animated logo
+- Loading bar with real-time progress
+- Role badge reveal after authentication
+- Smooth fade-out transition
+
+### 🔊 UI Sounds
+- Click, hover, and menu sounds
+- Notification sounds (success, error, warning)
+- Tab switch feedback
+
+### Visual Polish
+- **Pulsing border glow** — MainFrame and MiniBar breathe between red and purple
+- **Topbar avatar** — Player headshot with role-colored border + badge
+- **Sliding tab indicator** — Animated underline that glides between tabs
+- **Live nametags** — See other script users' role badges above their heads in-game
 
 ---
 
 ## Roles & Permissions
 
-| Feature | 🦇 User | 🔧 Contributor | ⭐ VIP | 👑 Admin |
-|---------|---------|----------------|--------|----------|
-| ESP | ✅ | ✅ | ✅ | ✅ |
-| Movement | ✅ | ✅ | ✅ | ✅ |
-| Emotes | ✅ | ✅ | ✅ | ✅ |
-| Games | ✅ | ✅ | ✅ | ✅ |
-| Executor | ❌ | ✅ | ✅ | ✅ |
-| See Online Users | ❌ | ✅ | ✅ | ✅ |
-| Aimbot | ❌ | ❌ | ✅ | ✅ |
-| Remote Spy | ❌ | ❌ | ✅ | ✅ |
-| Save Instance | ❌ | ❌ | ✅ | ✅ |
-| Admin Panel | ❌ | ❌ | ❌ | ✅ |
+| Feature | 👀 Visitor | 🦇 User | 🔧 Contributor | ⭐ VIP | 👑 Admin |
+|---------|-----------|---------|----------------|--------|----------|
+| ESP | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Movement | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Emotes | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Games | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Animations | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Cinema Mode | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Executor | ❌ | ❌ | ✅ | ✅ | ✅ |
+| See Online Users | ❌ | ❌ | ✅ | ✅ | ✅ |
+| Aimbot | ❌ | ❌ | ❌ | ✅ | ✅ |
+| Remote Spy | ❌ | ❌ | ❌ | ✅ | ✅ |
+| Save Instance | ❌ | ❌ | ❌ | ✅ | ✅ |
+| Admin Panel | ❌ | ❌ | ❌ | ❌ | ✅ |
+
+---
+
+## Security
+
+- **Whitelist system** with role-based access (👑 Admin, ⭐ VIP, 🔧 Contributor, 🦇 User, 👀 Visitor)
+- **Public access mode** — Open to everyone as Visitor when enabled
+- License expiration support
+- Ban system with custom messages
+- Maintenance mode
+- Version control & forced updates
+- XOR + Base64 obfuscated source code
+
+---
+
+## Hotkeys
+
+| Key | Action |
+|-----|--------|
+| `Ctrl+G` | Toggle GUI |
+| `N` | Toggle Freecam |
+| `Shift+F5` | Save All (map) |
+| `Right-Click` | Radial Menu (on player) |
+| `Backspace` | Exit Cinema Mode |
 
 ---
 
@@ -135,7 +191,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/IaG0D/vampire-loader/
 
 ## Contact
 
-- **Discord:** VampireSonata
+- **Discord:** iag0d
 - **Roblox:** VampireSonata
 
 ---
