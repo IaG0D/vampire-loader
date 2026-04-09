@@ -16,51 +16,6 @@
       "note": "Dono do script"
     },
     {
-      "id": 7594490830,
-      "name": "Lulu",
-      "role": "admin",
-      "banned": false,
-      "ban_reason": null,
-      "expires": null,
-      "note": "Admin"
-    },
-    {
-      "id": 10062725814,
-      "name": "Lulu 2",
-      "role": "admin",
-      "banned": false,
-      "ban_reason": null,
-      "expires": null,
-      "note": "Admin"
-    },
-    {
-      "id": 987654321,
-      "name": "ExemploVIP",
-      "role": "vip",
-      "banned": false,
-      "ban_reason": null,
-      "expires": null,
-      "note": "VIP vitalício"
-    },
-    {
-      "id": 2262783959,
-      "name": "GODQUENTE",
-      "role": "vip",
-      "banned": false,
-      "ban_reason": null,
-      "expires": null,
-      "note": "VIP vitalício"
-    },
-    {
-      "id": 4864492921,
-      "name": "MEAVE",
-      "role": "vip",
-      "banned": false,
-      "ban_reason": null,
-      "expires": null,
-      "note": "VIP"
-    },
-    {
       "id": 111222333,
       "name": "ExemploContribuidor",
       "role": "contributor",
